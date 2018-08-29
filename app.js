@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(flash());
 app.use(routes);
-
+app.use('/download',express.static('client'));
 app.listen(app.get("port"), function() {
     console.log("Server started on port " + app.get("port"));
 });

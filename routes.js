@@ -25,5 +25,4 @@ router.post("/app/add", Controllers.app.add);
 router.get("/app/list", Controllers.app.list);
 router.get("/app/check", Controllers.app.check);
 
-
 module.exports = router;
