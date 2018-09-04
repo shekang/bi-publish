@@ -63,9 +63,9 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                         }, 1000);
                     }
                 }
-                $('#arrow_right').on('click', function() {
-                    b();
-                });
+                // $('#arrow_right').on('click', function() {
+                //     b();
+                // });
                 $('#arrow_left').on('click', function() {
                     a();
                 });
@@ -150,7 +150,7 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
         }
 
         function b() {
-            if (c === 4) {} else {
+            if (c === 1) {} else {
                 c++;
                 d();
             }
@@ -162,7 +162,7 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
             } else {
                 $('#arrow_left').css({ 'display': 'block' });
             }
-            if (c === 4) {
+            if (c === 1) {
                 $('#arrow_right').css({ 'display': 'none' });
                 $('#background_ie').animate({ 'left': '-' + ((8.25 * document.documentElement.clientHeight) - document.documentElement.clientWidth - 50) + 'px' });
             } else {
@@ -247,20 +247,21 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                     GLOBAL.HORIZONTAL_STYLE = aC < aD || innerWidth > 853;
                 }
             },
+            //手机端下载连接等设置
             setStyle: function() {
                 if (GLOBAL.DEVICE_TYPE === 0) {
                     ah.style.display = 'none';
                 } else if (GLOBAL.DEVICE_TYPE === 1) {
                     ax.style.display = 'none';
                     ai.style.display = 'block';
-                    ah.href = 'https://i.weread.qq.com/download?from=Website&type=iOS';
+                    ah.href = '#';  //ios下载连接
                 } else if (GLOBAL.DEVICE_TYPE === 2) {
                     ax.style.display = 'none';
                     ag.style.display = 'block';
-                    ah.href = 'https://i.weread.qq.com/download?from=Website&type=Android';
+                    ah.href = '#';//android下载连接
                 }
                 if (GLOBAL.DEVICE_TYPE) {
-                    M.style.backgroundImage = 'url("images/mobile_function4_table_background_4x.png")';
+                    M.style.backgroundImage = 'url("images/mobile_function4_table_background_4x.png")';   //手机端背景图片
                 }
                 if ((USER_AGENT.toLocaleLowerCase().match(/safari/) && !USER_AGENT.toLocaleLowerCase().match(/chrome/)) || (USER_AGENT.toLocaleLowerCase().match(/iphone/)) && (USER_AGENT.toLocaleLowerCase().match(/micromessenger/))) {
                     o.style.letterSpacing = '-1px';
@@ -485,7 +486,7 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                 }
 
                 function aC() {
-                    if (ao === 4) {
+                    if (ao === 1) {
                         ae();
                     } else {
                         an();
@@ -508,7 +509,7 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                         al.style.top = '10px';
                         al.style.right = '16px';
                         al.classList.add('animateNavIn');
-                        if (ao === 4) {
+                        if (ao === 1) {
                             c.style.display = 'none';
                         }
                         break;
@@ -535,14 +536,14 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                     case 'mb-vertical':
                         e.style.display = 'none';
                         e.style.opacity = '1';
-                        if (ao === 4) {
+                        if (ao === 1) {
                             c.style.display = 'none';
                         } else {
                             c.style.display = 'block';
                         }
                         break;
                     case 'mb-horizontal':
-                        if (ao !== 4) {
+                        if (ao !== 1) {
                             e.style.display = 'block';
                             e.style.opacity = '1';
                             e.classList.add('animateArrowRight');
@@ -668,7 +669,7 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
         var ao = 0;
 
         function an() {
-            if (ao === 4) {
+            if (ao === 1) {
                 return true;
             } else {
                 av();
@@ -892,15 +893,15 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                     case 1:
                         aD();
                         break;
-                    case 2:
-                        aE();
-                        break;
-                    case 3:
-                        aF();
-                        break;
-                    case 4:
-                        aG();
-                        break;
+                    // case 2:
+                    //     aE();
+                    //     break;
+                    // case 3:
+                    //     aF();
+                    //     break;
+                    // case 4:
+                    //     aG();
+                    //     break;
                 }
             }
             if (!GLOBAL.HORIZONTAL_STYLE) {
@@ -1055,15 +1056,15 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                 case 1:
                     aD();
                     break;
-                case 2:
-                    aE();
-                    break;
-                case 3:
-                    aF();
-                    break;
-                case 4:
-                    aG();
-                    break;
+                // case 2:
+                //     aE();
+                //     break;
+                // case 3:
+                //     aF();
+                //     break;
+                // case 4:
+                //     aG();
+                //     break;
             }
         }
 
@@ -1171,13 +1172,13 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                 } else {
                     aI();
                 }
-                if (ao === 4) {
+                if (ao === 1) {
                     aD();
                 } else {
                     aC();
                 }
             } else if (GLOBAL.DEVICE_TYPE && GLOBAL.HORIZONTAL_STYLE) {
-                if (ao === 4) {
+                if (ao === 1) {
                     e.style.display = 'none';
                 } else {
                     e.style.display = 'block';
@@ -1193,7 +1194,7 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                 } else {
                     aE();
                 }
-                if (ao === 4) {
+                if (ao === 1) {
                     aH();
                 } else {
                     aG();
@@ -1204,7 +1205,7 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
                 } else {
                     aI();
                 }
-                if (ao === 4) {
+                if (ao === 1) {
                     aD();
                 } else {
                     aC();
@@ -1260,22 +1261,22 @@ if (USER_AGENT.match(/MSIE 8./) || USER_AGENT.match(/MSIE 7./) || USER_AGENT.mat
     window.onload = weRead.init();
     window.onresize = helper.debounce(weRead.onresize, 50);
 }
-var shareTimeLineConfig = { img_url: "images/weread_icon.png", link: window.location.href, desc: "", title: "\u5FAE\u4FE1\u8BFB\u4E66\uFF0C\u8BA9\u9605\u8BFB\u4E0D\u518D\u5B64\u72EC\u3002" };
-var shareMessageConfig = { img_url: "images/weread_icon.png", link: window.location.href, desc: "\u8BA9\u9605\u8BFB\u4E0D\u518D\u5B64\u72EC", title: "\u5FAE\u4FE1\u8BFB\u4E66" };
-if (typeof WeixinJSBridge == "undefined" && typeof onBridgeReady == 'function') {
-    if (document.addEventListener) {
-        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
-    } else if (document.attachEvent) {
-        document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
-        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
-    }
-}
+// var shareTimeLineConfig = { img_url: "images/weread_icon.png", link: window.location.href, desc: "", title: "\u5FAE\u4FE1\u8BFB\u4E66\uFF0C\u8BA9\u9605\u8BFB\u4E0D\u518D\u5B64\u72EC\u3002" };
+// var shareMessageConfig = { img_url: "images/weread_icon.png", link: window.location.href, desc: "\u8BA9\u9605\u8BFB\u4E0D\u518D\u5B64\u72EC", title: "\u5FAE\u4FE1\u8BFB\u4E66" };
+// if (typeof WeixinJSBridge == "undefined" && typeof onBridgeReady == 'function') {
+//     if (document.addEventListener) {
+//         document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+//     } else if (document.attachEvent) {
+//         document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+//         document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+//     }
+// }
 
-function onBridgeReady() {
-    WeixinJSBridge.on("menu:share:timeline", function() {
-        WeixinJSBridge.invoke("shareTimeline", shareTimeLineConfig);
-    });
-    WeixinJSBridge.on("menu:share:appmessage", function() {
-        WeixinJSBridge.invoke("sendAppMessage", shareMessageConfig);
-    });
-}
+// function onBridgeReady() {
+//     WeixinJSBridge.on("menu:share:timeline", function() {
+//         WeixinJSBridge.invoke("shareTimeline", shareTimeLineConfig);
+//     });
+//     WeixinJSBridge.on("menu:share:appmessage", function() {
+//         WeixinJSBridge.invoke("sendAppMessage", shareMessageConfig);
+//     });
+// }

@@ -3008,6 +3008,8 @@ screen and (min-device-width:1366px) {
         background-image: url("../images/background2740d2.jpg");
         background-size: auto 100%;
         background-repeat: no-repeat;
+        opacity: 0.5;
+
     }
     #logo {
         background-image: url("../images/logo279486.png");
@@ -4472,7 +4474,7 @@ img {
 #page_function1_book {
     position: absolute;
     width: 100%;
-    height: 79%;
+    height: 112%;
 }
 
 #page_function1_book_page1 {
@@ -4482,7 +4484,7 @@ img {
     right: 16.1%;
     bottom: 0;
     opacity: 0;
-    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.1);*/
 }
 
 #page_function1_book_page2 {
