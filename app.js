@@ -8,11 +8,9 @@ const flash = require("connect-flash");
 const routes = require("./routes");
 const app = express();
 const EROS_OPTIONS = require('./config')
-
 mongoose.connect(EROS_OPTIONS.db);
 app.use(EROS_OPTIONS.staticVirtualPath, express.static(EROS_OPTIONS.staticRealPath))
 app.set("port", process.env.PORT || EROS_OPTIONS.defaultPort);
-
 // 提高安全性
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
